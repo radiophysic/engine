@@ -389,9 +389,9 @@ class JsonModelParser {
             meshes.push(mesh);
         }
 
-        if (indexBuffer !== null) {
-            indexBuffer.unlock();
-        }
+        // if (indexBuffer !== null) {
+        //     indexBuffer.unlock();
+        // }
 
         return meshes;
     }

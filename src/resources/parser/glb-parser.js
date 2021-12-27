@@ -553,7 +553,7 @@ const createVertexBufferInternal = function (device, sourceDesc, flipV) {
         flipTexCoordVs(vertexBuffer);
     }
 
-    vertexBuffer.unlock();
+    // vertexBuffer.unlock();
 
     return vertexBuffer;
 };

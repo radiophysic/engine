@@ -171,7 +171,7 @@ class VertexBuffer {
             return false;
         }
         this.storage = data;
-        this.unlock();
+        // this.unlock();
         return true;
     }
 }

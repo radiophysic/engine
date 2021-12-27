@@ -324,9 +324,9 @@ class GraphicsDevice extends EventHandler {
         canvas.addEventListener("webglcontextlost", this._contextLostHandler, false);
         canvas.addEventListener("webglcontextrestored", this._contextRestoredHandler, false);
 
-        this.initializeExtensions();
-        this.initializeCapabilities();
-        this.initializeRenderState();
+        // this.initializeExtensions();
+        // this.initializeCapabilities();
+        // this.initializeRenderState();
         this.initializeContextCaches();
 
         this.defaultClearOptions = {
@@ -1068,9 +1068,9 @@ class GraphicsDevice extends EventHandler {
 
     restoreContext() {
 
-        this.initializeExtensions();
-        this.initializeCapabilities();
-        this.initializeRenderState();
+        // this.initializeExtensions();
+        // this.initializeCapabilities();
+        // this.initializeRenderState();
         this.initializeContextCaches();
 
         // Recompile all shaders (they'll be linked when they're next actually used)

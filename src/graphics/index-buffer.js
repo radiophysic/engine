@@ -188,7 +188,7 @@ class IndexBuffer {
         }
 
         this.storage = data;
-        this.unlock();
+        // this.unlock();
         return true;
     }
 
@@ -221,7 +221,7 @@ class IndexBuffer {
             indices.set(data);
         }
 
-        this.unlock();
+        // this.unlock();
     }
 
     // copies index data from index buffer into provided data array
