@@ -587,7 +587,7 @@ class Application extends EventHandler {
         // this.loader.addHandler("html", new HtmlHandler());
         // this.loader.addHandler("css", new CssHandler());
         // this.loader.addHandler("shader", new ShaderHandler());
-        // this.loader.addHandler("hierarchy", new HierarchyHandler(this));
+        this.loader.addHandler("hierarchy", new HierarchyHandler(this));
         // this.loader.addHandler("folder", new FolderHandler());
         // this.loader.addHandler("font", new FontHandler(this.loader));
         this.loader.addHandler("binary", new BinaryHandler());
@@ -806,6 +806,10 @@ class Application extends EventHandler {
         } else {
             done();
         }
+
+        _done = true;
+        self.fire("preload:end");
+        callback();
     }
 
     _preloadScripts(sceneData, callback) {
@@ -2059,11 +2063,11 @@ const makeTick = function (_app) {
 
         application.fire("framerender");
 
-        if (application.autoRender || application.renderNextFrame) {
-            application.updateCanvasSize();
-            application.render();
-            application.renderNextFrame = false;
-        }
+        // if (application.autoRender || application.renderNextFrame) {
+        //     application.updateCanvasSize();
+        //     application.render();
+        //     application.renderNextFrame = false;
+        // }
 
         // set event data
         _frameEndData.timestamp = now();
